@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Privacy Policy
+    url: https://eventcrew.sites.tab.bot/privacy/
+    about: How EventCrew handles location, chat and photos.
+  - name: Delete your data
+    url: https://eventcrew.sites.tab.bot/delete/
+    about: Leave an event, end an event, or let it delete itself.

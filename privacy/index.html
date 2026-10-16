@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy | EventCrew</title>
+<meta name="description" content="How EventCrew handles location, chat and photos: used only during an event, encrypted on your device, and permanently deleted when the event ends.">
+<meta name="theme-color" content="#11142b">
+<meta property="og:title" content="Privacy Policy | EventCrew">
+<meta property="og:description" content="How EventCrew handles location, chat and photos: used only during an event, encrypted on your device, and permanently deleted when the event ends.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eventcrew.sites.tab.bot/privacy/">
+<meta property="og:image" content="https://eventcrew.sites.tab.bot/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="../"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" width="28" height="28"><circle cx="16" cy="16" r="15" fill="#1b1f45"/><circle cx="16" cy="16" r="10.5" fill="none" stroke="#ff6b4a" stroke-width="2" stroke-dasharray="4 3"/><circle cx="16" cy="10.5" r="3.2" fill="#ff6b4a"/><circle cx="11" cy="19" r="3.2" fill="#7cf2c4"/><circle cx="21" cy="19" r="3.2" fill="#ffd166"/></svg><span>EventCrew</span></a>
+    <nav aria-label="Main">
+      <a href="../#how">How it works</a>
+      <a href="../#privacy">Privacy</a>
+      <a href="../#plans">Free &amp; Pro</a>
+      <a href="../#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="doc">
+<div class="wrap narrow">
+<h1>Privacy Policy</h1>
+<p class="meta">Effective date: October 16, 2026 · Last updated: October 16, 2026 · App: EventCrew (Android app and member web app) · Developer: Hartmann Studios</p>
+
+<p>This policy explains what information EventCrew ("EventCrew", "the app", "the service") handles, why, how long it is kept, and the choices you have. EventCrew is made by Hartmann Studios ("we", "us"). If you have a question, <a href="https://github.com/chartmann1590/eventcrew-site/issues/new/choose" rel="noopener">open an issue on GitHub</a> and choose "Privacy or data question".</p>
+
+<div class="summary">
+<h2>The short version</h2>
+<ul>
+<li>Location is used only during an event you choose to join, and only your latest spot is kept. There is no location history.</li>
+<li>Everything about an event (locations, chat, photos, nicknames) is permanently deleted when the event ends. Leaving early deletes your own data immediately.</li>
+<li>What you share is encrypted on your phone before it is sent. Our server stores only encrypted data it cannot read.</li>
+<li>No accounts: no email, phone number or real name.</li>
+<li>We do not sell your data, and we do not share it for anyone else's marketing.</li>
+<li>The free plan shows ads. Pro events show no ads to anyone in the group.</li>
+</ul>
+</div>
+
+<h2>1. How EventCrew works</h2>
+<p>One person, the <strong>leader</strong>, creates an event in the EventCrew Android app (or on the web) and shares an invite link. Other people, <strong>members</strong>, open the link in a web browser, pick a nickname and join. During the event, the group can see each other on a map, chat and share photos. Each event has an end time. When it ends, the event and everything in it are deleted.</p>
+
+<h2>2. Information handled during an event</h2>
+<h3>Content you share (encrypted on your device)</h3>
+<p>The event name, nicknames, chat messages, photos, locations and the leader's meetup pin are encrypted on your device with a key that exists only in the invite link. The part of the link that holds the key is never sent to our server. Our server, and the hosting provider it runs on, store and pass along only the encrypted form and cannot read it. Anyone you give the invite link to, and who is let into the event, can read it.</p>
+<h3>Technical information needed to run the event</h3>
+<ul>
+<li>A random member ID and a random access token stored in your browser or app. The server keeps only a one-way hash of the token.</li>
+<li>Your role (leader or member), whether you've been approved, the color of your map dot, when you joined, your location precision setting, and the time of your latest location update.</li>
+<li>The event's settings, end time and plan (Free or Pro), and invite links stored as one-way hashes with their expiry and use counts.</li>
+<li>If you turn on notifications, the push address your browser or phone gives us (see section 6).</li>
+</ul>
+<p>All of this is stored in that event's own database and is deleted with the event.</p>
+
+<h2>3. Location</h2>
+<ul>
+<li><strong>Only during an event.</strong> The app and the web page ask for location permission. Location is shared only with the people in the event you joined.</li>
+<li><strong>Members (web):</strong> your location is sent only while the EventCrew page is open, and only after you have moved. Browsers do not allow web pages to use location in the background.</li>
+<li><strong>Leader (Android app):</strong> while your event is running, the app can keep sharing your location with the group with a visible notification on your phone. It stops when the event ends or you leave.</li>
+<li><strong>Only the latest point.</strong> Each person's newest location replaces the previous one. No route or history is kept. Your last known spot is saved now and then so the group can still see where you were if your phone dies.</li>
+<li><strong>Your choice:</strong> exact, approximate (rounded to about 100 m on your device before it is encrypted) or paused. The leader can require approximate locations for everyone.</li>
+<li>Photos are re-drawn on your device before sharing, which removes hidden metadata such as the GPS position where the photo was taken.</li>
+</ul>
+
+<h2>4. When data is deleted</h2>
+<ul>
+<li><strong>When the event ends:</strong> when the leader taps End, or automatically one hour after the planned end time, every connection is closed and the event's entire database is deleted in one step: locations, chat, photos, nicknames, members, invites and settings. There are no soft deletes, archives or backups. If the leader leaves, the event ends.</li>
+<li><strong>When you leave:</strong> tapping Leave deletes your member record, location, messages and photos from the server immediately, and removes the event from your browser's storage. The same happens if the leader removes you.</li>
+<li><strong>Safety net:</strong> scheduled checks run every 30 minutes and daily to delete any event that has passed its end time.</li>
+<li>Our hosting provider (Cloudflare) handles the physical storage. How quickly its systems overwrite deleted storage is controlled by Cloudflare, not us. Event content is encrypted either way.</li>
+</ul>
+
+<h2>5. Abuse prevention and limits</h2>
+<p>To keep EventCrew free and prevent abuse, the service keeps a small amount of information with no names and no event content:</p>
+<ul>
+<li>A one-way hash of the leader's random device key, used to enforce the number of events a leader can run at once. It is deleted when the event ends.</li>
+<li>A salted one-way hash of the IP address that creates an event, combined with the date, used to limit how many events can be created from one place per day. The IP address itself is not stored, and the hash is deleted after one day.</li>
+<li>Daily counts of events created and expected usage, kept for 3 days.</li>
+</ul>
+<p>We have turned off request logging for the EventCrew server.</p>
+
+<h2>6. Notifications</h2>
+<ul>
+<li><strong>Web:</strong> if you allow notifications, your browser gives us a push address run by your browser's push service (for example Google, Apple or Mozilla). Notifications carry no content; they only say "New activity in your group". The push address is deleted with the event, or when you leave.</li>
+<li><strong>Android app:</strong> notifications to the leader app are delivered by Firebase Cloud Messaging, a Google service, which uses a device token for this.</li>
+</ul>
+
+<h2>7. Maps</h2>
+<p>Map images come from OpenFreeMap, which needs no account, key or cookies. Your device downloads the map tiles directly, so OpenFreeMap receives your IP address and which map area is being viewed, as with any website. Your location and the group's dots are drawn on your device and are not sent to OpenFreeMap.</p>
+
+<h2>8. Advertising</h2>
+<ul>
+<li><strong>Android app (free plan):</strong> the app shows ads from Google AdMob, never on the live map. The Google Mobile Ads SDK collects and shares with Google your device's advertising ID, IP address (which can indicate approximate location), device and app information, and ad interactions, as described in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a>. You can reset your advertising ID or opt out of personalized ads in Android Settings. Where the law requires it, the app asks for your consent first.</li>
+<li><strong>Member web app (free events):</strong> a single banner may be shown on some screens, never on the map. It is either our own promotion of Hartmann Studios products or an ad from a third-party ad network. Ads are non-personalized by default, and visitors in the EEA, UK and Switzerland are asked for consent where required. The ad network receives standard information from your browser such as your IP address and browser type. It never receives your nickname, messages, photos or location from EventCrew.</li>
+<li><strong>Pro:</strong> events started by a Pro leader show no ads to anyone in the group.</li>
+</ul>
+
+<h2>9. Purchases</h2>
+<p>Pro is sold through Google Play Billing. Google processes your payment; we never receive your card number or billing details. Subscription status is managed by RevenueCat, using a random ID generated by the app rather than your name or email. When a Pro leader creates an event, the server checks that status so the event gets Pro limits.</p>
+
+<h2>10. What we don't do</h2>
+<ul>
+<li>We do not sell personal data, and we do not share it for anyone else's advertising or marketing.</li>
+<li>We do not ask for an email address, phone number, real name or contacts.</li>
+<li>The member web app has no analytics or crash-reporting tools.</li>
+<li>We do not keep location history or event content after an event ends.</li>
+</ul>
+
+<h2>11. Who processes data for us</h2>
+<ul>
+<li>Cloudflare (hosting the server and each event's encrypted database)</li>
+<li>Google (Google Play, Play Billing, AdMob ads and Firebase Cloud Messaging)</li>
+<li>RevenueCat (subscription status)</li>
+<li>OpenFreeMap (map tiles)</li>
+<li>Your browser's push service, if you turn on web notifications</li>
+<li>A web ad network, for banners on free events, if one is used</li>
+</ul>
+
+<h2>12. Security</h2>
+<p>Connections use HTTPS. Content is encrypted on your device before it is sent. Invite links can expire and can be cancelled by the leader, and by default the leader approves each new person. Anyone who has the link and is let in can see the event, so share it only with people you trust. No system is perfectly secure, but keeping as little as possible for as short a time as possible is how EventCrew limits risk.</p>
+
+<h2>13. Children</h2>
+<p>EventCrew is not directed at children under 13, and we do not knowingly collect information from them.</p>
+
+<h2>14. Your choices and rights</h2>
+<p>You can pause location, choose approximate location, turn notifications off, or leave an event at any time, which deletes your data immediately. Because there are no accounts and event data is deleted when the event ends, there is usually nothing left for us to access, correct or delete afterwards. See <a href="../delete/">Delete your data</a>. For anything else, <a href="https://github.com/chartmann1590/eventcrew-site/issues/new/choose" rel="noopener">open an issue on GitHub</a>.</p>
+
+<h2>15. Changes to this policy</h2>
+<p>If this policy changes, we will update this page and its "Last updated" date. Significant changes will also be noted in the app.</p>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="../"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" width="28" height="28"><circle cx="16" cy="16" r="15" fill="#1b1f45"/><circle cx="16" cy="16" r="10.5" fill="none" stroke="#ff6b4a" stroke-width="2" stroke-dasharray="4 3"/><circle cx="16" cy="10.5" r="3.2" fill="#ff6b4a"/><circle cx="11" cy="19" r="3.2" fill="#7cf2c4"/><circle cx="21" cy="19" r="3.2" fill="#ffd166"/></svg><span>EventCrew</span></a>
+      <p class="small">A Hartmann Studios app. Android first.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="../privacy/">Privacy Policy</a>
+      <a href="../delete/">Delete your data</a>
+      <a href="https://github.com/chartmann1590/eventcrew-site/issues/new/choose" rel="noopener">Support (GitHub)</a>
+    </nav>
+    <p class="small copy">© 2026 Hartmann Studios. Google Play and the Google Play logo are trademarks of Google LLC.</p>
+  </div>
+</footer>
+</body>
+</html>
